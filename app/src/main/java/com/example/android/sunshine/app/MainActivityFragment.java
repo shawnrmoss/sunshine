@@ -39,8 +39,7 @@ public class MainActivityFragment extends Fragment {
             "Sun - Sunny - 80/68"
         };
 
-        List<String> weekForecast = new ArrayList<String>(
-            Arrays.asList(forecastArray));
+        List<String> weekForecast = new ArrayList<>(Arrays.asList(forecastArray));
 
         //Now that we have some dummy forecast data, create an ArrayAdapter.
         //The ArrayAdapter will take data from a source (like our dummy forecast) and
@@ -49,7 +48,7 @@ public class MainActivityFragment extends Fragment {
           //The current context (this fragment parent activity
           getActivity(),
           //ID of the list item layout
-          R.layout.list_item_forecast_textview,
+          R.layout.list_item_forecast,
           //ID of the textview to populate
           R.id.list_item_forecast_textview,
           //Forecast data
