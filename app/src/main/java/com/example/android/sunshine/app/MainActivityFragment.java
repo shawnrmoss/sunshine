@@ -44,7 +44,7 @@ public class MainActivityFragment extends Fragment {
         //Now that we have some dummy forecast data, create an ArrayAdapter.
         //The ArrayAdapter will take data from a source (like our dummy forecast) and
         //use it to populate the ListView its attached to.
-        mForecastAdapter = new ArrayAdapter<String>(
+        mForecastAdapter = new ArrayAdapter<>(
           //The current context (this fragment parent activity
           getActivity(),
           //ID of the list item layout
@@ -58,6 +58,6 @@ public class MainActivityFragment extends Fragment {
         ListView listView = (ListView) rootView.findViewById(R.id.listview_forecast);
         listView.setAdapter(mForecastAdapter);
 
-        return inflater.inflate(R.layout.fragment_main, container, false);
+        return rootView;
     }
 }
