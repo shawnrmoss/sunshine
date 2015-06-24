@@ -26,7 +26,7 @@ import java.util.List;
  */
 public class ForecastFragment extends Fragment {
 
-    ArrayAdapter<String> mForecastAdapter;
+    private ArrayAdapter<String> mForecastAdapter;
 
     public ForecastFragment() {
     }
@@ -65,8 +65,6 @@ public class ForecastFragment extends Fragment {
         //Get a reference to the ListView, and attach this adapter to it
         ListView listView = (ListView) rootView.findViewById(R.id.listview_forecast);
         listView.setAdapter(mForecastAdapter);
-
-
 
         return rootView;
     }
